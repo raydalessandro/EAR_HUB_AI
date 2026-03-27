@@ -1,3 +1,5 @@
+@import 'tailwindcss';
+
 * {
   border-color: var(--color-border);
 }
