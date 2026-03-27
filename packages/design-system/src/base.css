@@ -1,7 +1,5 @@
-@import 'tailwindcss';
-
 * {
-  border-color: var(--color-border);
+  border-color: hsl(var(--color-border));
 }
 
 body {

@@ -1,1 +1,5 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import '@ear-hub/design-system/globals.css';
