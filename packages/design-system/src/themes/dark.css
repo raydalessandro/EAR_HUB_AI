@@ -1,0 +1,16 @@
+@layer base {
+  .dark {
+    --color-background: var(--color-gray-900);
+    --color-foreground: var(--color-gray-50);
+    --color-primary: 221 83% 53%;
+    --color-primary-foreground: 0 0% 100%;
+    --color-secondary: 217 33% 17%;
+    --color-secondary-foreground: 210 40% 98%;
+    --color-muted: 217 33% 17%;
+    --color-muted-foreground: 215 20% 65%;
+    --color-accent: 217 33% 17%;
+    --color-accent-foreground: 210 40% 98%;
+    --color-border: 215 25% 27%;
+    --color-input: 215 25% 27%;
+  }
+}

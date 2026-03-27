@@ -1,0 +1,50 @@
+@layer base {
+  :root {
+    /* Primitive colors (HSL) */
+    --color-gray-50: 210 40% 98%;
+    --color-gray-100: 210 40% 96%;
+    --color-gray-200: 214 32% 91%;
+    --color-gray-300: 213 27% 84%;
+    --color-gray-400: 215 20% 65%;
+    --color-gray-500: 215 16% 47%;
+    --color-gray-600: 215 19% 35%;
+    --color-gray-700: 215 25% 27%;
+    --color-gray-800: 217 33% 17%;
+    --color-gray-900: 222 47% 11%;
+
+    /* Semantic tokens */
+    --color-background: var(--color-gray-50);
+    --color-foreground: var(--color-gray-900);
+    --color-primary: 221 83% 53%;
+    --color-primary-foreground: 0 0% 100%;
+    --color-secondary: 210 40% 96%;
+    --color-secondary-foreground: 222 47% 11%;
+    --color-muted: 210 40% 96%;
+    --color-muted-foreground: 215 16% 47%;
+    --color-accent: 210 40% 96%;
+    --color-accent-foreground: 222 47% 11%;
+    --color-destructive: 0 84% 60%;
+    --color-destructive-foreground: 0 0% 100%;
+    --color-border: 214 32% 91%;
+    --color-input: 214 32% 91%;
+    --color-ring: 221 83% 53%;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    /* Typography */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-display: 'Space Grotesk', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+    /* Radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+  }
+}
