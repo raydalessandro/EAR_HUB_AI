@@ -1,52 +1,293 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import AppCard from '../components/AppCard.astro';
-import Footer from '../components/Footer.astro';
 ---
 
 <Layout
-  title="EAR Hub - AI-Powered Insight Tools"
+  title="EAR Hub • Living Neural Ecosystem"
   description="Three specialized AI applications for self-understanding, conflict resolution, and creative experiences."
 >
-  <Hero />
+  <!-- NEURAL BACKGROUND -->
+  <div class="bg-neural"></div>
 
-  <section id="apps" class="py-20 px-4">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-display font-bold text-center mb-12">
-        Our Applications
-      </h2>
+  <!-- HEADER: LIQUID GLASS PILL -->
+  <header class="fixed top-8 left-1/2 -translate-x-1/2 z-50 nav-pill liquid-glass px-8 py-3 flex items-center gap-8 shadow-2xl">
+    <!-- Logo -->
+    <div class="flex items-center gap-3 text-xl font-display font-bold tracking-tight">
+      <div class="w-8 h-8 rounded-2xl bg-gradient-to-br from-purple-500 to-emerald-400 flex items-center justify-center text-black text-sm">E</div>
+      EAR
+    </div>
 
-      <div class="grid md:grid-cols-3 gap-6">
-        <AppCard
-          title="Oracle Astrology"
-          description="Personalized astrological readings powered by AI. Explore your birth chart, planetary transits, and cosmic insights."
-          icon="🔮"
-          accentColor="hsl(270, 80%, 60%)"
-          href="https://oracle.earhub.com"
-          status="coming-soon"
-        />
+    <!-- Nav Items -->
+    <nav class="flex items-center gap-2 relative" id="nav">
+      <button data-app="oracle" class="nav-item px-6 py-2.5 rounded-3xl text-sm font-medium flex items-center gap-2 hover:text-white transition relative z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17l1.333-2.667" /></svg>
+        Oracle
+      </button>
+      <button data-app="resolver" class="nav-item px-6 py-2.5 rounded-3xl text-sm font-medium flex items-center gap-2 hover:text-white transition relative z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m-3-9h6m-6 6h6" /></svg>
+        Resolver
+      </button>
+      <button data-app="menu" class="nav-item px-6 py-2.5 rounded-3xl text-sm font-medium flex items-center gap-2 hover:text-white transition relative z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        MenuAI
+      </button>
 
-        <AppCard
-          title="Conflict Resolver"
-          description="Navigate personal and interpersonal conflicts with AI-guided analysis. Understand patterns, archetypes, and paths to resolution."
-          icon="⚖️"
-          accentColor="hsl(200, 90%, 50%)"
-          href="https://resolver.earhub.com"
-          status="coming-soon"
-        />
+      <!-- Sliding active pill -->
+      <div id="active-pill" class="absolute top-1/2 -translate-y-1/2 h-10 bg-white/10 backdrop-blur-xl rounded-3xl shadow-inner transition-all duration-500 ease-[cubic-bezier(0.34,1.2,0.64,1)]"></div>
+    </nav>
+  </header>
 
-        <AppCard
-          title="MenuAI"
-          description="AI-powered meal planning and recipe generation. Create personalized menus based on your preferences, dietary needs, and available ingredients."
-          icon="🍽️"
-          accentColor="hsl(142, 71%, 45%)"
-          href="https://menu.earhub.com"
-          status="coming-soon"
-        />
+  <main class="pt-40 pb-20 px-6 max-w-screen-2xl mx-auto">
+    <!-- HERO -->
+    <div class="text-center mb-24">
+      <div class="inline-flex items-center gap-3 mb-6 px-8 py-3 liquid-glass text-xs font-mono tracking-[2px] uppercase rounded-3xl">
+        LIVING NEURAL ECOSYSTEM • PHASE 2 COMPLETE
+      </div>
+
+      <h1 class="font-display text-[13vw] md:text-[110px] leading-[0.8] font-black tracking-[-6px] mb-4"
+          style="filter: drop-shadow(0 0 60px rgba(147,51,234,0.6));">
+        THINK.<br>RESOLVE.<br>CREATE.
+      </h1>
+
+      <p class="max-w-md mx-auto text-xl text-white/70">Un ecosistema cognitivo vivo. Tre menti AI che pulsano insieme.</p>
+    </div>
+
+    <!-- CARDS -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Oracle Card -->
+      <div data-card="oracle" class="app-card liquid-glass p-8 cursor-pointer group">
+        <div class="flex justify-between mb-8">
+          <svg id="oracle-svg" xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110" fill="none" class="text-purple-400 group-active:scale-110 transition">
+            <circle cx="55" cy="55" r="44" stroke="currentColor" stroke-width="9"/>
+            <circle cx="55" cy="55" r="29" fill="#f3e8ff" fill-opacity="0.2"/>
+            <path d="M32 40 L39 48 L48 42 L55 52 L68 43 L79 48 L85 39" stroke="currentColor" stroke-width="3.5"/>
+          </svg>
+          <div class="text-xs font-mono uppercase tracking-widest px-5 h-fit py-1 rounded-3xl border border-purple-400/30">PHASE 3</div>
+        </div>
+        <h2 class="font-display text-4xl font-bold mb-2">Oracle Astrology</h2>
+        <p class="text-white/70">Il tuo futuro cosmico pulsa in tempo reale. Clicca e senti le stelle vibrare.</p>
+      </div>
+
+      <!-- Resolver Card -->
+      <div data-card="resolver" class="app-card liquid-glass p-8 cursor-pointer group">
+        <div class="flex justify-between mb-8">
+          <svg id="resolver-svg" xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110" fill="none" class="text-sky-400 group-active:scale-110 transition">
+            <line x1="55" y1="88" x2="55" y2="32" stroke="currentColor" stroke-width="9" stroke-linecap="round"/>
+            <circle cx="31" cy="58" r="11" stroke="currentColor" stroke-width="6"/>
+            <circle cx="79" cy="58" r="11" stroke="currentColor" stroke-width="6"/>
+          </svg>
+          <div class="text-xs font-mono uppercase tracking-widest px-5 h-fit py-1 rounded-3xl border border-sky-400/30">PHASE 4</div>
+        </div>
+        <h2 class="font-display text-4xl font-bold mb-2">Conflict Resolver</h2>
+        <p class="text-white/70">I conflitti si sciolgono. Clicca e guarda l'equilibrio prendere vita.</p>
+      </div>
+
+      <!-- MenuAI Card -->
+      <div data-card="menu" class="app-card liquid-glass p-8 cursor-pointer group">
+        <div class="flex justify-between mb-8">
+          <svg id="menu-svg" xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110" fill="none" class="text-emerald-400 group-active:scale-110 transition">
+            <circle cx="55" cy="68" r="34" stroke="currentColor" stroke-width="11"/>
+            <path d="M40 38 Q48 29 55 38 Q63 29 71 38" stroke="currentColor" stroke-width="3"/>
+          </svg>
+          <div class="text-xs font-mono uppercase tracking-widest px-5 h-fit py-1 rounded-3xl border border-emerald-400/30">PHASE 5</div>
+        </div>
+        <h2 class="font-display text-4xl font-bold mb-2">Menu AI</h2>
+        <p class="text-white/70">Il tuo prossimo pasto si crea da solo. Clicca e senti il sapore dell'AI.</p>
       </div>
     </div>
-  </section>
-
-  <Footer />
+  </main>
 </Layout>
+
+<style>
+  :root {
+    --glare-x: 50%;
+    --glare-y: 30%;
+  }
+
+  /* BACKGROUND NEURAL LIQUID MESH */
+  .bg-neural {
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+    background: radial-gradient(circle at 30% 20%, #9333ea22 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, #0ea5e922 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, #22c55e22 0%, transparent 50%);
+    animation: neuralPulse 25s ease infinite;
+  }
+
+  @keyframes neuralPulse {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.08); }
+  }
+
+  /* TRUE LIQUID GLASS MATERIAL */
+  .liquid-glass {
+    position: relative;
+    backdrop-filter: blur(60px) saturate(220%);
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 32px;
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,0.15) inset,
+      0 25px 50px -12px rgb(0 0 0 / 0.4),
+      0 0 80px -20px currentColor;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .liquid-glass::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 60%;
+    height: 120%;
+    background: linear-gradient(135deg,
+      rgba(255,255,255,0.45) 0%,
+      rgba(255,255,255,0) 50%);
+    transform: rotate(25deg);
+    pointer-events: none;
+    animation: liquidShimmer 8s linear infinite;
+  }
+
+  @keyframes liquidShimmer {
+    0% { transform: rotate(25deg) translateX(-30%); }
+    100% { transform: rotate(25deg) translateX(120%); }
+  }
+
+  /* MOUSE-TRACKED GLARE */
+  .liquid-glass::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--glare-x) var(--glare-y),
+      rgba(255,255,255,0.7) 0%,
+      transparent 60%);
+    opacity: 0.35;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    transition: all 0.1s ease;
+    z-index: 1;
+  }
+
+  /* HEADER PILL */
+  .nav-pill {
+    transition: all 0.5s cubic-bezier(0.34, 1.2, 0.64, 1);
+  }
+
+  /* CARD HOVER */
+  .app-card {
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .app-card:hover {
+    transform: scale(1.06) translateY(-18px);
+  }
+
+  /* PARTICLE BURST */
+  .particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: particleBurst 800ms ease-out forwards;
+  }
+
+  @keyframes particleBurst {
+    0% { transform: translate(0,0) scale(1); opacity: 1; }
+    100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+  }
+
+  @keyframes crystalPulse {
+    0% { filter: brightness(1); }
+    50% { filter: brightness(3) drop-shadow(0 0 30px #9333ea); }
+    100% { filter: brightness(1); }
+  }
+
+  @keyframes balanceSwing {
+    0%,100% { transform: rotate(0deg); }
+    25% { transform: rotate(-12deg); }
+    75% { transform: rotate(12deg); }
+  }
+
+  @keyframes steamBurst {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-60px); }
+  }
+</style>
+
+<script>
+  // MOUSE-TRACKED GLARE
+  document.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth) * 100 + '%'
+    const y = (e.clientY / window.innerHeight) * 100 + '%'
+    document.querySelectorAll('.liquid-glass').forEach(glass => {
+      (glass as HTMLElement).style.setProperty('--glare-x', x)
+      ;(glass as HTMLElement).style.setProperty('--glare-y', y)
+    })
+  })
+
+  // SLIDING PILL NAVIGATION
+  function activateNav(button: HTMLElement) {
+    const pill = document.getElementById('active-pill')
+    if (!pill) return
+
+    pill.style.left = button.offsetLeft + 'px'
+    pill.style.width = button.offsetWidth + 'px'
+
+    // Spring effect
+    pill.style.transform = 'translateY(-50%) scale(0.9)'
+    setTimeout(() => pill.style.transform = 'translateY(-50%) scale(1)', 80)
+  }
+
+  // CARD ENTERTAINMENT
+  function triggerEntertainment(appIndex: number, card: HTMLElement) {
+    const colors: string[] = ['#9333ea', '#0ea5e9', '#22c55e']
+    const color = colors[appIndex] ?? colors[0]!
+
+    // Burst particles
+    for (let i = 0; i < 45; i++) {
+      const particle = document.createElement('div')
+      particle.className = 'particle'
+      particle.style.background = color
+      particle.style.left = Math.random() * 100 + '%'
+      particle.style.top = Math.random() * 100 + '%'
+      card.appendChild(particle)
+
+      const angle = Math.random() * 360
+      particle.style.setProperty('--tx', Math.cos(angle * Math.PI / 180) * 120 + 'px')
+      particle.style.setProperty('--ty', Math.sin(angle * Math.PI / 180) * 120 + 'px')
+
+      setTimeout(() => particle.remove(), 900)
+    }
+
+    // App-specific animation
+    const svgIds: string[] = ['oracle-svg', 'resolver-svg', 'menu-svg']
+    const animations: string[] = ['crystalPulse', 'balanceSwing', 'steamBurst']
+    const svgId = svgIds[appIndex] ?? svgIds[0]!
+    const animation = animations[appIndex] ?? animations[0]!
+    const svg = document.getElementById(svgId)
+    if (svg) {
+      svg.style.animation = `${animation} 600ms ease`
+      setTimeout(() => svg.style.animation = '', 800)
+    }
+
+    // Tactile feedback
+    card.style.transform = 'scale(0.92)'
+    setTimeout(() => card.style.transform = '', 120)
+  }
+
+  // Event listeners
+  window.addEventListener('DOMContentLoaded', () => {
+    const navButtons = document.querySelectorAll('.nav-item')
+    navButtons.forEach((button, index) => {
+      button.addEventListener('click', () => activateNav(button as HTMLElement))
+      if (index === 0) activateNav(button as HTMLElement)
+    })
+
+    const cards = document.querySelectorAll('[data-card]')
+    cards.forEach((card, index) => {
+      card.addEventListener('click', () => triggerEntertainment(index, card as HTMLElement))
+    })
+  })
+</script>
