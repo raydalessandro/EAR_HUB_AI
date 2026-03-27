@@ -1,6 +1,9 @@
-@layer components {
-  /* Component-level utilities (complex patterns) */
-  .card {
-    @apply rounded-lg border bg-card text-card-foreground shadow-sm;
-  }
+/* Component-level utilities */
+.card {
+  border-radius: var(--radius-lg);
+  border-width: 1px;
+  border-color: var(--color-border);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }

@@ -18,9 +18,11 @@
     "@ear-hub/design-system": "workspace:*",
     "@ear-hub/tsconfig": "workspace:*",
     "@ear-hub/utils": "workspace:*",
+    "@tailwindcss/vite": "^4.2.2",
     "astro": "^5.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.8",
