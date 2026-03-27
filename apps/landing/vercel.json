@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd ../.. && pnpm turbo run build --filter=@ear-hub/landing",
+  "outputDirectory": "dist",
+  "installCommand": "cd ../.. && pnpm install --frozen-lockfile",
+  "framework": "astro"
+}

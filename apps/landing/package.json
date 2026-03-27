@@ -1,0 +1,31 @@
+{
+  "name": "@ear-hub/landing",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "lint": "eslint .",
+    "typecheck": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.0.0",
+    "@ear-hub/design-system": "workspace:*",
+    "@ear-hub/tsconfig": "workspace:*",
+    "@ear-hub/utils": "workspace:*",
+    "astro": "^5.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.8",
+    "@types/react": "^19.0.11",
+    "@types/react-dom": "^19.0.6",
+    "typescript": "^5.6.0"
+  }
+}

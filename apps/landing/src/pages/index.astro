@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import AppCard from '../components/AppCard.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="EAR Hub - AI-Powered Insight Tools"
+  description="Three specialized AI applications for self-understanding, conflict resolution, and creative experiences."
+>
+  <Hero />
+
+  <section id="apps" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-display font-bold text-center mb-12">
+        Our Applications
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <AppCard
+          title="Oracle Astrology"
+          description="Personalized astrological readings powered by AI. Explore your birth chart, planetary transits, and cosmic insights."
+          icon="🔮"
+          accentColor="hsl(270, 80%, 60%)"
+          href="https://oracle.earhub.com"
+          status="coming-soon"
+        />
+
+        <AppCard
+          title="Conflict Resolver"
+          description="Navigate personal and interpersonal conflicts with AI-guided analysis. Understand patterns, archetypes, and paths to resolution."
+          icon="⚖️"
+          accentColor="hsl(200, 90%, 50%)"
+          href="https://resolver.earhub.com"
+          status="coming-soon"
+        />
+
+        <AppCard
+          title="MenuAI"
+          description="AI-powered meal planning and recipe generation. Create personalized menus based on your preferences, dietary needs, and available ingredients."
+          icon="🍽️"
+          accentColor="hsl(142, 71%, 45%)"
+          href="https://menu.earhub.com"
+          status="coming-soon"
+        />
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
