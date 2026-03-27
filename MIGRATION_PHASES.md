@@ -1,5 +1,51 @@
 # EAR Hub - Migration Phases
 
+## Development Workflows
+
+### Workflow A: Structured Architecture
+**When:** App with clear requirements, important architecture decisions, defined stack
+**Process:**
+1. User defines general goal
+2. Claude proposes **detailed spec + architectural constraints**
+3. User approves spec (or discusses constraint changes)
+4. Claude orchestrates agents with **binding instructions** (no room for divergent choices)
+5. Checkpoint after each phase, zero bug from agent incoherence
+
+**Result:** Maximum quality, Ray controls everything, time invested in upfront design
+
+**Examples:** Phase 0 (monorepo setup), Phase 1-2 (design system + UI library)
+
+---
+
+### Workflow B: Vibe Coding
+**When:** Prototypes, UI experiments, apps without rigid requirements
+**Process:**
+1. Ray describes what he wants generally ("make liquid glass cool")
+2. **Claude decides technical constraints** (stack, patterns, conventions)
+3. **Claude announces decisions BEFORE coding:**
+   > "To guarantee coherence I choose: Astro + React islands, inline Tailwind utilities, dark theme #0a0a0a. If you want to change this tell me now, otherwise I proceed."
+4. Ray approves or discusses only constraints he cares about
+5. Claude implements with declared constraints, **guarantees agent coherence**
+6. If fixes needed later, we fix (but fewer bugs because explicit constraints)
+
+**Result:** Speed, Ray delegates technical decisions, Claude guarantees internal coherence
+
+**Examples:** Phase 2.5 (landing page liquid glass design)
+
+---
+
+### Key Principle
+**Even in vibe coding, constraints are ALWAYS declared before implementation.**
+This prevents:
+- Agents making divergent choices between files
+- Token waste fixing incoherence bugs
+- Lost context from compaction during debugging
+
+**Bad (today):** Implement design → discover CSS bug → diagnose → fix → more bugs from agent mismatch
+**Good (next time):** Declare constraints → approve → implement coordinated → clean result
+
+---
+
 ## ✅ Phase 0: Monorepo Setup (COMPLETE)
 - Turborepo + pnpm workspaces
 - TypeScript strict mode
@@ -237,21 +283,34 @@
 2. Agent parallelization for independent tasks
 3. Clear checkpoint approval between phases
 
-**What to improve (today's session):**
-1. Separate diagnostic phase from implementation
-2. More specific agent instructions for coordination
-3. Explicit "spec complete, proceed?" checkpoints
-4. Use TodoWrite for multi-step tracking
+**What didn't work (today's session):**
+1. Implemented liquid glass design without declaring technical constraints first
+2. Mixed foreground work + implicit agent coordination → agent incoherence
+3. CSS bug required diagnosis + multiple fix iterations → token waste
+4. Missing: explicit "these are my constraints, approve?" checkpoint
+
+**Root cause:** Skipped constraint declaration step in Workflow B (vibe coding)
 
 **Pattern for next session:**
 ```
+WORKFLOW A (Structured):
 1. User describes goal
-2. Claude proposes detailed spec with agent coordination plan
+2. Claude proposes detailed spec with architectural decisions
 3. User approves spec
-4. Claude launches agents in parallel with explicit instructions
-5. Checkpoint after each major phase
-6. Push only when user confirms quality
+4. Claude orchestrates agents with binding instructions
+5. Checkpoint after each phase
+6. Push when quality confirmed
+
+WORKFLOW B (Vibe Coding):
+1. User describes goal
+2. Claude decides technical constraints (stack, patterns, conventions)
+3. Claude announces: "I choose X, Y, Z constraints. Approve?"
+4. User approves (or discusses constraints)
+5. Claude implements with coordinated agents following declared constraints
+6. Push when quality confirmed
 ```
+
+**Key insight:** Even vibe coding needs explicit constraints BEFORE implementation to prevent agent divergence.
 
 ---
 
